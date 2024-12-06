@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Formulario Tiffin University</title> 
+    <link rel="stylesheet" href="style.css"> <!-- Vincula el archivo CSS para estilos -->
+</head>
+<body>
+    <div class="contenedor"> <!-- Contenedor principal del formulario -->
+        <h1>Formulario de Registro</h1> 
+        <form id="Form-registro"> <!-- Inicia el formulario con un ID para referencia en JavaScript -->
+            <label for="idNumero">Número de Identificación</label> <!-- Etiqueta para el campo de identificación -->
+            <input type="text" id="idNumero" name="idNumero" required> <!-- Campo de texto para el número de identificación, requerido -->
+
+            <label for="nombreCompleto">Nombre Completo</label> <!-- Etiqueta para el campo de nombre completo -->
+            <input type="text" id="nombreCompleto" name="nombreCompleto" required> <!-- Campo de texto para el nombre completo, requerido -->
+
+            <label for="contraseña">Contraseña</label> <!-- Etiqueta para el campo de contraseña -->
+            <input type="password" id="contraseña" name="contraseña" required> <!-- Campo de contraseña, requerido -->
+
+            <label for="confirmContraseña">Confirmar Contraseña</label> <!-- Etiqueta para el campo de confirmación de contraseña -->
+            <input type="password" id="confirmContraseña" name="confirmContraseña" required> <!-- Campo de confirmación de contraseña, requerido -->
+
+            <label>Acción</label> <!-- Etiqueta para la sección de selección de acción -->
+            <div class="radio-grupo"> <!-- Agrupación de botones de opción -->
+                <input type="radio" id="cotizar" name="accion" value="Cotizar" required> <!-- Opción para cotizar -->
+                <label for="cotizar">Cotizar</label> <!-- Etiqueta para la opción de cotizar -->
+                <input type="radio" id="reservar" name="accion" value="Reservar" required> <!-- Opción para reservar -->
+                <label for="reservar">Reservar</label> <!-- Etiqueta para la opción de reservar -->
+            </div>
+
+            <label for="destino">Ciudad de Destino</label> <!-- Etiqueta para el campo de selección de ciudad de destino -->
+            <select id="destino" name="destino" required> <!-- Menú desplegable para seleccionar ciudad de destino -->
+                <option value="Ohio">Ohio</option> 
+                <option value="Chicago">Chicago</option> 
+                <option value="New York">New York</option> 
+                <option value="Los Angeles">Los Angeles</option> 
+                <option value="Miami">Miami</option> 
+            </select>
+
+            <label for="hotel">Hotel</label> <!-- Etiqueta para el campo de selección de hotel -->
+            <select id="hotel" name="hotel" required> <!-- Menú desplegable para seleccionar hotel -->
+                <option value="Hotel Ohio">Hotel Ohio</option> 
+                <option value="Hotel Chicago">Hotel Chicago</option> 
+                <option value="Hotel New York">Hotel New York</option> 
+                <option value="Hotel Los Angeles">Hotel Los Angeles</option> 
+                <option value="Hotel Miami">Hotel Miami</option> 
+            </select>
+
+            <label for="comentarios">Comentarios (máximo 300 caracteres)</label> <!-- Etiqueta para el campo de comentarios -->
+            <textarea id="comentarios" name="comentarios" maxlength="300"></textarea> <!-- Área de texto para comentarios con un límite de 300 caracteres -->
+
+            <label>Registro Completo</label> <!-- Etiqueta para el campo de registro completo -->
+            <label class="switch"> <!-- Etiqueta para el interruptor de registro completo -->
+                <input type="checkbox" id="registroCompleto" name="registroCompleto"> <!-- Casilla de verificación para registro completo -->
+                <span class="slider"></span> <!-- Elemento visual para el interruptor -->
+            </label>
+
+            <button type="button" onclick="saveToFile()">Enviar</button> <!-- Botón para enviar el formulario, ejecuta la función saveToFile() cuando se hace clic -->
+        </form>
+    </div>
+    <script src="script.js"></script> <!-- Vincula el archivo JavaScript para funcionalidades adicionales -->
+</body>
+</html>

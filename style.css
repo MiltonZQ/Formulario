@@ -1,0 +1,116 @@
+/* Colores corporativos de Tiffin University */
+:root {
+    --green: #006747; /* Definición del color verde corporativo */
+    --gold: #ffcc33; /* Definición del color amarillo corporativo */
+    --white: #FFFFFF; /* Definición del color blanco */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente del cuerpo del documento */
+    background-color: var(--green); /* Aplica el color de fondo verde */
+    color: var(--white); /* Establece el color del texto en blanco */
+    display: flex; /* Utiliza flexbox para la disposición del contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 100vh; /* Establece la altura del cuerpo al 100% de la altura de la ventana */
+    margin: 100px; /* Aplica un margen de 100 píxeles alrededor del cuerpo */
+}
+
+.contenedor {
+    background-color: var(--white); /* Establece el fondo del contenedor en blanco */
+    color: var(--green); /* Establece el color del texto dentro del contenedor en verde */
+    padding: 20px; /* Aplica un padding de 20 píxeles dentro del contenedor */
+    border-radius: 8px; /* Redondea las esquinas del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil alrededor del contenedor */
+    width: 90%; /* Establece el ancho del contenedor al 90% del ancho de su elemento padre */
+    max-width: 500px; /* Limita el ancho máximo del contenedor a 500 píxeles */
+    margin-top: 100; /* Este valor no tiene unidad, debería ser 'margin-top: 100px;' */
+}
+
+form {
+    display: flex; /* Utiliza flexbox para el formulario */
+    flex-direction: column; /* Organiza los elementos del formulario en una columna */
+}
+
+label {
+    margin-top: 10px; /* Aplica un margen superior de 10 píxeles a las etiquetas */
+    font-weight: bold; /* Hace que el texto de las etiquetas sea negrita */
+}
+
+input, select, textarea, button {
+    margin-top: 5px; /* Aplica un margen superior de 5 píxeles a los elementos de entrada */
+    padding: 10px; /* Aplica un padding de 10 píxeles dentro de los elementos de entrada */
+    border: 1px solid var(--gold); /* Establece un borde dorado alrededor de los elementos de entrada */
+    border-radius: 4px; /* Redondea las esquinas de los elementos de entrada */
+    width: 100%; /* Establece el ancho de los elementos de entrada al 100% del contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el cálculo del ancho y alto */
+}
+
+button {
+    background-color: var(--green); /* Establece el fondo del botón en verde */
+    color: var(--white); /* Establece el color del texto del botón en blanco */
+    font-weight: bold; /* Hace que el texto del botón sea negrita */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+}
+
+button:hover {
+    background-color: var(--gold); /* Cambia el fondo del botón a amarillo al pasar el mouse */
+    color: var(--green); /* Cambia el color del texto del botón a verde al pasar el mouse */
+}
+
+.radio-grupo {
+    display: flex; /* Utiliza flexbox para organizar los botones de opción */
+    gap: 10px; /* Aplica un espacio de 10 píxeles entre los botones de opción */
+}
+
+.switch {
+    position: relative; /* Posiciona el interruptor de manera relativa para su contenido */
+    display: inline-block; /* Muestra el interruptor en línea */
+    width: 60px; /* Establece el ancho del interruptor */
+    height: 34px; /* Establece la altura del interruptor */
+}
+
+.switch input {
+    opacity: 0; /* Hace que el input sea invisible */
+    width: 0; /* Establece el ancho del input a 0 */
+    height: 0; /* Establece la altura del input a 0 */
+}
+
+.slider {
+    position: absolute; /* Posiciona el slider de manera absoluta dentro del interruptor */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre el slider */
+    top: 0; /* Posiciona el slider en la parte superior del interruptor */
+    left: 0; /* Posiciona el slider en el lado izquierdo del interruptor */
+    right: 0; /* Posiciona el slider en el lado derecho del interruptor */
+    bottom: 0; /* Posiciona el slider en la parte inferior del interruptor */
+    background-color: var(--gold); /* Establece el color de fondo del slider en amarillo */
+    transition: 0.4s; /* Aplica una transición suave de 0.4 segundos para cambios de estado */
+    border-radius: 34px; /* Redondea las esquinas del slider */
+}
+
+.slider:before {
+    position: absolute; /* Posiciona el círculo del slider de manera absoluta dentro del slider */
+    content: ""; /* Necesario para mostrar el elemento */
+    height: 26px; /* Establece la altura del círculo del slider */
+    width: 26px; /* Establece el ancho del círculo del slider */
+    left: 4px; /* Posiciona el círculo 4 píxeles desde la izquierda */
+    bottom: 4px; /* Posiciona el círculo 4 píxeles desde la parte inferior */
+    background-color: white; /* Establece el color de fondo del círculo en blanco */
+    transition: 0.4s; /* Aplica una transición suave de 0.4 segundos para el movimiento del círculo */
+    border-radius: 50%; /* Hace que el círculo sea completamente redondeado */
+}
+
+input:checked + .slider {
+    background-color: var(--green); /* Cambia el color de fondo del slider a verde cuando el input está seleccionado */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); /* Mueve el círculo del slider a la derecha cuando el input está seleccionado */
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%; /* Establece el ancho del contenedor al 100% en pantallas pequeñas */
+        padding: 15px; /* Aplica un padding de 15 píxeles dentro del contenedor en pantallas pequeñas */
+    }
+}
